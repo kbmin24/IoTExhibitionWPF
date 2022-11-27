@@ -1,0 +1,23 @@
+﻿<Page x:Class="Temperature"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IoTExhibitionWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="824" d:DesignWidth="1536"
+      Title="Temperature">
+    <Grid Background="White">
+        <Label Content="Temperature and Humidity Checker" HorizontalAlignment="Left" Margin="38,25,0,0" VerticalAlignment="Top" FontSize="48" FontStyle="Italic" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="417" Margin="66,153,0,0" VerticalAlignment="Top" Width="441" Source="/imgTemp.png" Stretch="UniformToFill"/>
+        <Label x:Name="lbldata" Content="Please wait...&#x0a;Data is being loaded" HorizontalAlignment="Left" Margin="66,596,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="How does this work?" HorizontalAlignment="Left" Margin="854,109,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="576,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20" Width="927">
+            This module works by using temperature and humidity sensors (DHT22). This sensor is connected to raspberry pi, which is a mini computer. A program on the raspberry pi will then read the data from the sensor.
+            <LineBreak/><LineBreak/>How this data gets sent to this computer is a bit more complex, but not as much as you might expect. On the raspberry pi, a web server application is operating, like any other websites you may see. If you access that website, it will return you the data read off from the sensor: temperature and humidity level.
+            <LineBreak/><LineBreak/>This dashboard program will automatically access the website served by the raspberry pi, and retrieve the value from there, like you would search google using a web browser. During this process, a structured data format called ‘JSON’ is used.
+            <LineBreak/><LineBreak/>Note that these kinds of data storage and retrieval methods are widely employed, and is called the ‘RESTful API’.
+        </TextBlock>
+        <Image HorizontalAlignment="Left" Height="150" Margin="768,649,0,0" VerticalAlignment="Top" Width="455" Source="/REST2.PNG"/>
+    </Grid>
+</Page>

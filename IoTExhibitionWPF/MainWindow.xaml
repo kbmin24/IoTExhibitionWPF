@@ -1,0 +1,21 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IoTExhibitionWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="824" Width="1536">
+    <Grid>
+        <Label Content="Internet of Things Exhibition" HorizontalAlignment="Left" Margin="38,25,0,0" VerticalAlignment="Top" FontSize="48" FontStyle="Italic" FontWeight="Bold" Background="#00000000"/>
+        <Button Content="Smart Lightbulbs" HorizontalAlignment="Left" Margin="38,160,0,0" VerticalAlignment="Top" Height="115" Width="350" Background="#FFDDDDDD" Click="VoiceLight_Show" FontSize="36"/>
+        <Button Content="Temperature &amp; Humidity" HorizontalAlignment="Left" Margin="450,160,0,0" VerticalAlignment="Top" Height="115" Width="468" Background="#FFDDDDDD" Click="Temp_Show" FontSize="36"/>
+        <Button Content="Door Open Detection" HorizontalAlignment="Left" Margin="1000,160,0,0" VerticalAlignment="Top" Height="115" Width="468" Background="#FFDDDDDD" Click="Door_Show" FontSize="36"/>
+
+        <Frame x:Name="pageZone" NavigationUIVisibility="Hidden" Panel.ZIndex="999"/>
+        <Button Content="Go Back" HorizontalAlignment="Left" Margin="1412,720,0,0" VerticalAlignment="Top" Click="Prev" Panel.ZIndex="2000" FontSize="24"/>
+        <Image HorizontalAlignment="Left" Height="449" Margin="38,307,0,0" VerticalAlignment="Top" Width="346" Source="/bulb.PNG"/>
+        <Image HorizontalAlignment="Left" Height="449" Margin="514,307,0,0" VerticalAlignment="Top" Width="346" Source="/imgTemp.png"/>
+        <Image HorizontalAlignment="Left" Height="449" Margin="1058,307,0,0" VerticalAlignment="Top" Width="346" Source="/22-11-24 01-09-23 5567.png"/>
+    </Grid>
+</Window>

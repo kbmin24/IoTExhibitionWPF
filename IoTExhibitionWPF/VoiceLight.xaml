@@ -1,0 +1,31 @@
+﻿<Page x:Class="VoiceLight"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IoTExhibitionWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="824" d:DesignWidth="1536"
+      Title="VoiceLight">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="187*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Smart lightbulbs" HorizontalAlignment="Left" Margin="38,25,0,0" VerticalAlignment="Top" FontSize="48" FontStyle="Italic" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Margin="66,153,0,126" Width="441" Source="/bulb.PNG" Stretch="UniformToFill"/>
+        <Label Content="How does this work?" HorizontalAlignment="Left" Margin="854,256,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label Content="How do I try this out?" HorizontalAlignment="Left" Margin="854,33,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" RenderTransformOrigin="0.522,-2.709"/>
+
+        <Button x:Name="btnclick" Content="Click me and speak!" HorizontalAlignment="Left" Margin="113,667,0,0" VerticalAlignment="Top" FontSize="36" Click="Button_Click" Height="97" Grid.RowSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="687,88,0,0" TextWrapping="Wrap" Text="Try saying one of the following commands: on off purple red green blue white flame effect clear" VerticalAlignment="Top" FontSize="36" Width="781"/>
+        <TextBlock HorizontalAlignment="Left" Margin="652,319,0,0" TextWrapping="Wrap" Text="This module first attempts to recognize your voice using Microsoft Speech API, which is a default feature of Windows. Then, this program sends a resquest to LIFX RESTful API." VerticalAlignment="Top" FontSize="36" Width="781"/>
+        <Button Content="Green" Click="green" HorizontalAlignment="Left" Margin="652,566,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button Content="White" Click="white" HorizontalAlignment="Left" Margin="652,639,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button Content="blue" Click="blue" HorizontalAlignment="Left" Margin="768,566,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button Content="red" Click="red" HorizontalAlignment="Left" Margin="768,639,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button Content="Pulse" Click="flame" HorizontalAlignment="Left" Margin="902,566,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button Content="On/Off" Click="off" HorizontalAlignment="Left" Margin="902,639,0,0" VerticalAlignment="Top" FontSize="24"/>
+
+    </Grid>
+</Page>

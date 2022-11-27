@@ -1,0 +1,26 @@
+﻿<Page x:Class="door"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IoTExhibitionWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="824" d:DesignWidth="1536"
+      Title="door">
+    <Grid Background="White">
+        <Label Content="Door checker" HorizontalAlignment="Left" Margin="38,25,0,0" VerticalAlignment="Top" FontSize="48" FontStyle="Italic" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="417" Margin="66,153,0,0" VerticalAlignment="Top" Width="441" Source="/22-11-24 01-09-23 5567.png" Stretch="UniformToFill"/>
+        <Label Content="The box is" HorizontalAlignment="Left" Margin="66,596,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="How does this work?" HorizontalAlignment="Left" Margin="854,194,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="576,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="927">
+            This module works by using a magnetic sensor. Magnetic sensors work by utilizing electromagnetic field. Whenever two sensors are come together, magnetic repulsion will cause the reed switch in the circuit to be closed, thereby closing the whole circuit. Then, the raspberry pi attached to the circuit will read that current.
+            <LineBreak/><LineBreak/>This data is sent to this computer by utilizing a web server. On the raspberry pi, a web server application is operating, like any other websites you may see. If you access that website, it will return you the data read off from the sensor: temperature and humidity level.
+            <LineBreak/><LineBreak/>This dashboard program will automatically access the website served by the raspberry pi, and retrieve the value from there, like you would search google using a web browser. During this process, a structured data format called ‘JSON’ is used.
+            <LineBreak/><LineBreak/>Note that these kinds of data storage and retrieval methods are widely employed, and is called the ‘RESTful API’.
+            <LineBreak/><LineBreak/>
+        </TextBlock>
+        <Label x:Name="lbldata" Content="Please wait..." HorizontalAlignment="Left" Margin="250,596,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="How do I try this out?" HorizontalAlignment="Left" Margin="854,33,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" RenderTransformOrigin="0.522,-2.709"/>
+        <TextBlock HorizontalAlignment="Left" Margin="576,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Width="927"><Run Text="Try opening and closing the box."/></TextBlock>
+    </Grid>
+</Page>
