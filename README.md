@@ -1,4 +1,6 @@
 # IoTExhibitionWPF
+![Image](./22-11-24 12-54-13 5577.jpg)
+
 NLCS Jeju Computer Science Enrichment Week Exhibition source code.
 
 This exhibition was aimed to demonstrate the basic capabilites of IoT. This exhbition was composed of
