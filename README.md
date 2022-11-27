@@ -1,5 +1,5 @@
 # IoTExhibitionWPF
-![Image](./22-11-24 12-54-13 5577.jpg)
+![Image](preview.png)
 
 NLCS Jeju Computer Science Enrichment Week Exhibition source code.
 
